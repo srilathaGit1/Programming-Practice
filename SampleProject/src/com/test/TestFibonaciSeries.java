@@ -10,7 +10,7 @@ public class TestFibonaciSeries {
 	  
 	FibonaciSeries feb = new FibonaciSeries();
 	int result = feb.isFibonaciSeries(10);
-	
+	System.out.println(result);
 	/* for (int i=2; i<=10; i++){
 		 int result = feb.isFibonaciSeries(i);
 		 System.out.println(result); 
@@ -19,14 +19,14 @@ public class TestFibonaciSeries {
   }
   @Test
   public void isFibonaciforTwenty(){
-	  
-	  for (int i=2; i<=20; i++){
+	  int result = FibonaciSeries.isFibonaciSeries1(20);
+	  System.out.println(result);
+	  /*for (int i=2; i<=20; i++){
 		  int result = FibonaciSeries.isFibonaciSeries1(i);
-		System.out.println(result);
+		System.out.println(result);*/
 	  }
 	  
   }   
 	  
-  }
   
 
