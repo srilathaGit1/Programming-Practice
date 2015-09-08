@@ -11,9 +11,9 @@ public class SortArray {
 		   for(int i=1; i<parr.length; i++){
 			   int temp =0;
 			   if(parr[i-1]>parr[i]){
-				   temp=parr[i-1];
-				   parr[i-1]= parr[i];
-				   parr[i]= temp;
+				   temp = parr[i-1];
+				   parr[i-1]=parr[i];
+				   parr[i] = temp;
 				   
 			   }
 		   }
