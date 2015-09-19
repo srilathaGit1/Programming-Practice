@@ -8,7 +8,7 @@ import com.main.CountWordsInAFile;
 public class TestCountWordsFromFile {
   @Test
   public void testCountWords() {
-	  String output = "";
+	  
 	  String input = "C:\\li\\Auto.txt";
 	  CountWordsInAFile fi= new CountWordsInAFile();
 	  int result = fi.toCountWordsFromFile(input);
