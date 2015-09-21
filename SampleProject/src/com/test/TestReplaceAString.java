@@ -13,7 +13,7 @@ import com.main.ReplaceAString;
 
 public class TestReplaceAString {
   @Test
-  public void testToReplaceAString() throws IOException {
+  public void testToReplaceAString()  {
 	  
 	  String str = "C:\\testing\\testing code.txt";
 	  String searchWord = "testing";
