@@ -12,7 +12,7 @@ public class SearchForAString {
 			BufferedReader read = new BufferedReader(new FileReader(fileName));
 			String line = read.readLine();
 			while (line != null) {
-				entireFile = entireFile + System.getProperty("line.serparator") + line;
+				entireFile = entireFile + System.getProperty("line.separator") + line;
 				line = read.readLine();
 			}
 			read.close();

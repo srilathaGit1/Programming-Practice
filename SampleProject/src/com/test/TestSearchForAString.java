@@ -8,7 +8,7 @@ import org.testng.Assert;
 public class TestSearchForAString {
   @Test
   public void testToCountAString() {
-	  String filename = "C:\\folder\\ Notes.txt";
+	  String filename = "C:\\testing\\testing code.txt";
 	  String word = "testing";
 	  SearchForAString search = new SearchForAString();
 	  int result = search.isSearchForString(filename, word);
@@ -19,7 +19,7 @@ public class TestSearchForAString {
   
   @Test
   public void negTestCountAString(){
-	  String fileName = "C:\\folder\\ Notes.txt" ;
+	  String fileName = "C:\\testing\\testing code.txt" ;
 	  String word =  "testing";
 	  SearchForAString search = new SearchForAString();
 	  int result = search.isSearchForString(fileName, word);
