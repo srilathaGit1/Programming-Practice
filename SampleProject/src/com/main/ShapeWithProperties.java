@@ -10,7 +10,8 @@ public abstract class ShapeWithProperties {
 	private double perimeter;
 	
 	public double calculateArea(){
-		return area;	
+	 System.out.println(ShapeConstants.pi);
+	 return area;	
 	}
 	
 	public double calculatePerimeter(){
