@@ -6,21 +6,22 @@ package com.main;
 public abstract class ShapeWithProperties {
 	
 	private int noOfSides;
-	private double area;
-	private double perimeter;
-	
+
 	public double calculateArea(){
-	 System.out.println(ShapeConstants.pi);
-	 return area;	
+	 //System.out.println(ShapeConstants.pi);
+	 return 0;	
 	}
 	
 	public double calculatePerimeter(){
-		return 	perimeter;	
+		return 0;	
 	}
 	
 	public void setSides( int pSides){
 		this.noOfSides = pSides;
 	}
 	
+	public int getSides(){
+		return this.noOfSides;
+	}
 
 }
