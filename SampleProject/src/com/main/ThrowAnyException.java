@@ -20,6 +20,6 @@ public class ThrowAnyException {
 	public void method3() throws Exception{
 		String str = null;
 		
-	}
+	} 
 
 }
