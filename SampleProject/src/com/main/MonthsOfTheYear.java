@@ -2,9 +2,7 @@ package com.main;
 
 public class MonthsOfTheYear {
 
-	public enum Month{
-		
-      	
+	private enum Month{
 		JANUARY,
 		FEBRUARY,
 		MARCH,
@@ -17,13 +15,13 @@ public class MonthsOfTheYear {
 		OCTOBER,
 		NOVEMBER,
 		DECEMBER
-		
-		
+	}
+	
+	public void printEnum(){
+		for(Month singleMonth: Month.values()) { 
+			System.out.println(singleMonth.name());
+		}
 	
 	}
-	{
-	for(Month singleMonth: Month.values()) { System.out.println(singleMonth.name());}
-	
-}
 	
 }
