@@ -45,6 +45,24 @@ public class TestJDBCConnection<LastName> {
 	
 }
 
-
-
+@Test
+public void testUpdateExample() throws Exception{
+	JDBCConnection connect = new JDBCConnection();
+	String firstName = "Steven";
+	int age = 38;
+    connect.updateExample(age, firstName);
+    
 }
+
+@Test
+public void testInsertEmployeeDate() throws Exception{
+	    JDBCConnection connection = new JDBCConnection();
+		int age = 35;
+		String fName = "Steven";
+	    connection.insertIntoEmployees(age, fName);
+		
+	}
+	
+}
+
+

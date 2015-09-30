@@ -8,15 +8,7 @@ public class PrintNumbersWithoutLoop {
 	
 	
 	
-		Object[] numbers = new Object[10];
-		Arrays.fill(numbers, new Object(){
-			private int count = 0;
-			
-		@Override
-	     public String toString() {
-            return Integer.toString(++count);
-        }
-    });
+	int[] numbers = new int[]{1,2,3,4,5,6,7,8,9,10};
     System.out.println(Arrays.toString(numbers));
    
 }

@@ -38,7 +38,8 @@ public class JDBCConnection {
 				person.setLastName(last_name);
 				person.setEmployeeId(employee_id);
 				names.add(person);
-				//System.out.println("employeeid: " + employee_id + " firstName:" + first_name + " lastName:" + last_name);
+				// System.out.println("employeeid: " + employee_id + "
+				// firstName:" + first_name + " lastName:" + last_name);
 
 			}
 		}
@@ -49,18 +50,17 @@ public class JDBCConnection {
 			if (dbConnection != null) {
 				dbConnection.close();
 			}
-			
+
 		}
 		return names;
 
 	}
 
-	public Person  getEmployeeIdOnly(int pEmployeeId, String pLastName) throws Exception{
+	public Person getEmployeeIdOnly(int pEmployeeId, String pLastName) throws Exception {
 
 		String sql = "Select employee_id, first_name, last_name from employees  where employee_id=? and upper(last_name) like '%'||upper(?)||'%' ";
 		Person person = new Person();
-		try{
-
+		try {
 
 			dbConnection = DriverManager.getConnection(DB_CONNECTION, DB_USERNAME, DB_PASSWORD);
 			PreparedStatement preparedStatement = dbConnection.prepareStatement(sql);
@@ -80,14 +80,72 @@ public class JDBCConnection {
 			}
 		}
 
-		catch(Exception ex){
+		catch (Exception ex) {
 			ex.printStackTrace();
-		}
-		finally{
-			if(dbConnection!=null){
+		} finally {
+			if (dbConnection != null) {
 				dbConnection.close();
 			}
 		}
 		return person;
 	}
+
+	public void insertIntoEmployees(int pAge, String pFName) throws Exception{
+
+		String sql = "insert into example(age, fname) values (?,?) ";
+		Person person = new Person();
+		try{
+
+
+			dbConnection = DriverManager.getConnection(DB_CONNECTION, DB_USERNAME, DB_PASSWORD);
+			PreparedStatement preparedStatement = dbConnection.prepareStatement(sql);
+			preparedStatement.setInt(1, pAge);
+			preparedStatement.setString(2, pFName);
+			
+			int rs = preparedStatement.executeUpdate();
+			dbConnection.commit();
+
+		
+	  }
+	  catch(Exception ex){
+		  ex.printStackTrace();
+		  dbConnection.rollback();
+	  }
+		finally{
+			if(dbConnection!=null){
+				dbConnection.close();
+			}
+		}
+	}
+	
+	public void updateExample(int pAge, String pFName)throws Exception{
+		String sql = "update Example set age = ? where upper(fname) like upper(?)";
+		Person person = new Person();
+				try{
+
+
+					dbConnection = DriverManager.getConnection(DB_CONNECTION, DB_USERNAME, DB_PASSWORD);
+					PreparedStatement preparedStatement = dbConnection.prepareStatement(sql);
+					preparedStatement.setInt(1, pAge);
+					preparedStatement.setString(2, pFName);
+					
+					int rs = preparedStatement.executeUpdate();
+					dbConnection.commit();
+
+				
+			  }
+			  catch(Exception ex){
+				  ex.printStackTrace();
+				  dbConnection.rollback();
+			  }
+				finally{
+					if(dbConnection!=null){
+						dbConnection.close();
+					}
+				}
+	          
+	
+
+}
+
 }
