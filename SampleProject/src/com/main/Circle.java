@@ -6,7 +6,8 @@
 package com.main;
 
  public class Circle extends ShapeWithProperties implements ShapeConstants {
-	 private int radius;
+	 
+	private int radius;
 	
 	public Circle(int pRadius, int pNumberOfSides){
 		
@@ -15,14 +16,31 @@ package com.main;
 				
 	 }
 	
+	 //Method Overloading
    public void setRadius(int pRadius){
 	   this.radius = pRadius;
    }
+  
+   public void setRadius(int pRadius, int pNumberOfSides){
+	   this.radius = pRadius;
+	   this.setSides(pNumberOfSides);
+	   
+   }
+  
    
    public int getRadius(){
 	 return this.radius;
    }
-	
+    public void calculateArea(int pNumberOfSides){
+    	this.setSides(pNumberOfSides);
+    	
+    	
+    }
+    
+    public int calculatePerimeter(int pRadius){
+    	this.radius = pRadius;
+    	return this.radius;
+    	}
 	//overriding calculateArea method
 	public double calculateArea(){
 			
@@ -31,7 +49,7 @@ package com.main;
 	  return totalArea;
 		
 	}
-	
+	//overriding calculatePerimeter method
 	public double calculatePerimeter(){
 		
 		double perimeter = 2*ShapeConstants.pi*this.radius;
