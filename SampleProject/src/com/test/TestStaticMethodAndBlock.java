@@ -13,8 +13,7 @@ public class TestStaticMethodAndBlock {
   public void testStaticMethod() {
 	 StaticMethodAndBlock result = new StaticMethodAndBlock();
 	
-	  int result1 = result.thisIsStaticMethod(10);
-	  System.out.println(result1);
+	  result.thisIsStaticMethod();
 	
 		  
 	 }
