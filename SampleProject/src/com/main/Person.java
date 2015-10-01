@@ -45,6 +45,17 @@ public class Person {
 	 return "Hyderabad";
 	 
 	  }
+ public int hashCode(){
+	 return employeeId;
+	
+	 
+ }
  
+  public boolean equals(Person test){
+	  if(this.getEmployeeId() == test.getEmployeeId()){
+		  return true;
+	  }
+	  return false;
+  }
  
 }
